@@ -1,31 +1,23 @@
 
-$(document).ready(function()
-{
-    $("#my-table-solos").hide();
-    $("#option1").click(function()
-    {
-        $("#my-table-solos").show();
-        return false;           
-    });
 
-});
-$(document).ready(function()
-{
-    $("#my-table-duos").hide();
-    $("#option2").click(function()
-    {
-        $("#my-table-duos").show();
-        return false;           
-    });
+$(document).ready(function(){
+      $("#my-table-creativo").hide();
+      $("#my-table-solos").hide();
+      $("#my-table-duos").hide();
 
-});
-$(document).ready(function()
-{
-    $("#my-table-creativo").hide();
-    $("#option3").click(function()
-    {
+    $("#option1").click(function(){
+      $("#my-table-duos").show();
+      $("#my-table-creativo").hide();
+      $("#my-table-solos").hide();
+    });
+    $("#option2").click(function(){
         $("#my-table-creativo").show();
-        return false;           
+        $("#my-table-solos").hide();
+        $("#my-table-duos").hide();
     });
-
-});
+    $("#option3").click(function(){
+        $("#my-table-solos").show();
+        $("#my-table-creativo").hide();
+        $("#my-table-duos").hide();
+    });
+  });
