@@ -80,21 +80,34 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        
+
         <div class="jumbotron p-0 bg-white ">
             <h1 class="display-4 text-center">Resultados del Mundial</h1>
-            <div class="md-form active-pink active-pink-2 mb-3 mt-0">
-                <input
-                    class="form-control text-center"
-                    type="text"
-                    placeholder="ID del Jugador"
-                    aria-label="Search">
-            </div>
-            <a
-                class="btn btn-primary d-flex justify-content-center "
-                href="#"
-                role="button">Buscar
-            </a>
+            <form id="buscador2" onsubmit="return false">
+                <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+                    <input
+                        class="form-control text-center"
+                        type="text"
+                        placeholder="ID del Jugador"
+                        aria-label="Search"
+                        id="buscador">
+
+                    <a
+                        class="btn btn-primary d-flex justify-content-center mt-2"
+                        href="#"
+                        role="button"
+                        id="buscador1"
+                        onclick="check();">Buscar
+                    </a>
+                    <a
+                        class="btn btn-primary d-flex justify-content-center mt-2"
+                        href="#"
+                        role="button"
+                        id="limpiar"
+                        onclick="limpiar();">Limpiar
+                    </a>
+                </div>
+            </form>
             <hr class="my-2">
             <div class="btn-group btn-group-toggle d-flex justify-content-center">
 
@@ -120,10 +133,16 @@
                     value="Solos">Solos</button>
             </div>
         </div>
-        <table id="my-table-creativo" class="table mx-auto"></table>
+        <table id="my-table-creativo" class="table mx-auto "></table>
         <table id="my-table-solos" class="table mx-auto"></table>
         <table id="my-table-duos" class="table mx-auto"></table>
+
+        <table id="my-table-creativo-q" class="table mx-auto my-5"></table>
+        <table id="my-table-solos-q" class="table mx-auto my-5"></table>
+        <table id="my-table-duos-q" class="table mx-auto my-5"></table>
         <script>
+
+            /////////////////////////////
             $("#my-table-creativo").sheetrock({
                 url: "https://docs.google.com/spreadsheets/d/1bAvzXFOSQXRAzUZEHxmeQUxhQinHUJTh0xJ5mW" +
                         "wHrl0/edit#gid=0"
@@ -136,6 +155,14 @@
                 url: "https://docs.google.com/spreadsheets/d/1CPCVUbsZMw6eW9ntqom3GRR5ZqgnDj0OQnzzas" +
                         "Xnsx4/edit#gid=0"
             });
+            /////////////////////////////
+            function check() {
+               
+            }
+            function limpiar() {
+                location.reload();
+                return false;
+            }
         </script>
 
     </body>
